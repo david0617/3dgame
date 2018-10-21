@@ -12,8 +12,8 @@ public class Weapon : MonoBehaviour
     public float fireingTimer;
     public int reloadTimer;
     public int maxAmmocount;
-    private int ammocount;
-    private bool reloading = true;
+    public int ammocount;
+    public bool reloading = true;
     
     private void Start()
     {
