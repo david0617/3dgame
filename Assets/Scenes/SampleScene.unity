@@ -401,7 +401,7 @@ MonoBehaviour:
   speed: 1000
   fireingTimer: 0.1
   reloadTimer: 3
-  maxAmmocount: 5
+  maxAmmocount: 20
 --- !u!1 &929161711
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +664,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: eb2136a3cdea8f84bb3b2ca2d025a818, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb2136a3cdea8f84bb3b2ca2d025a818, type: 3}
@@ -888,9 +888,9 @@ MonoBehaviour:
   mainCamera: {fileID: 534669904}
   ammo: {fileID: 1930638813722262, guid: 7aee7eefdb6e60445ba55642bc0a2241, type: 2}
   speed: 1000
-  fireingTimer: 0
-  reloadTimer: 0
-  maxAmmocount: 0
+  fireingTimer: 2
+  reloadTimer: 3
+  maxAmmocount: 1
 --- !u!1 &1888443794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1077,10 @@ Prefab:
     - target: {fileID: 400000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
