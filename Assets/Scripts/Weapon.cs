@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
     public int reloadTimer;
     public int maxAmmocount;
     public int ammocount;
-    public bool reloading = true;
+    public bool reloading = false;
     
     private void Start()
     {
@@ -27,10 +27,10 @@ public class Weapon : MonoBehaviour
             FireBullet();
             ammocount -= 1;
             StartCoroutine (FireTimer());
-        } else if (Input.GetButtonDown("Reload") && reloading){
+        } else if (Input.GetButtonDown("Reload") && !reloading){
             StartCoroutine (ReloadTimer());
             print ("reload");
-        } else if (ammocount == 0 && reloading) {
+        } else if (ammocount == 0 && !reloading) {
             StartCoroutine (ReloadTimer());
             print ("reload");
         }
@@ -49,10 +49,10 @@ public class Weapon : MonoBehaviour
     }
 
     private IEnumerator ReloadTimer() {
-        reloading = false;
+        reloading = true;
         yield return new WaitForSeconds (reloadTimer);
         ammocount = maxAmmocount;
-        reloading = true;
+        reloading = false;
         }
 }
 /* if (Input.GetButtonDown("Fire1")) {

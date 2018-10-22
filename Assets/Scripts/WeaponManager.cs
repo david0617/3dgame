@@ -30,8 +30,8 @@ public class WeaponManager : MonoBehaviour {
 		string maxAmmoCount = activeWeapon.GetComponent<Weapon>().maxAmmocount.ToString();
 		bool reloading = activeWeapon.GetComponent<Weapon>().reloading;
 		if (reloading) {
-			ammoDisplay.tag = "reloading";
-		}else {
+			ammoDisplay.text = "Reloading";
+		}else { 
 			ammoDisplay.text = "Ammo " + maxAmmoCount + "/" + ammoCount;
 		}
 	}
