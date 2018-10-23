@@ -29,10 +29,10 @@ public class PlayerHealth : MonoBehaviour {
 		}
 	}
 
-	/* public void HealthPickUp(int HealthAdd) {
+	 public void HealthPickUp(int HealthAdd) {
 		currenthealth += HealthAdd;
 		if (currenthealth > maxHealth){
 			currenthealth = maxHealth;
 		}
-	}*/
+	}
 }

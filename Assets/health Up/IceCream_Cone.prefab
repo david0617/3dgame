@@ -9,20 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000013122234568}
+  m_RootGameObject: {fileID: 1824813741866018}
   m_IsPrefabAsset: 1
---- !u!1 &1000013122234568
+--- !u!1 &1824813741866018
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4000010356322748}
-  - component: {fileID: 33000012468301878}
-  - component: {fileID: 23000013980861980}
-  - component: {fileID: 136839150647392344}
-  - component: {fileID: 114914470175548868}
+  - component: {fileID: 4937672325083992}
+  - component: {fileID: 33943567177893388}
+  - component: {fileID: 23625712528852430}
+  - component: {fileID: 136578542127862848}
+  - component: {fileID: 114782608419270572}
   m_Layer: 0
   m_Name: IceCream_Cone
   m_TagString: Untagged
@@ -30,12 +30,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000010356322748
+--- !u!4 &4937672325083992
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013122234568}
+  m_GameObject: {fileID: 1824813741866018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.09, y: 2.73, z: 1.934409}
   m_LocalScale: {x: 5, y: 5, z: 5}
@@ -43,12 +43,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23000013980861980
+--- !u!23 &23625712528852430
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013122234568}
+  m_GameObject: {fileID: 1824813741866018}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -78,31 +78,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33000012468301878
+--- !u!33 &33943567177893388
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013122234568}
+  m_GameObject: {fileID: 1824813741866018}
   m_Mesh: {fileID: 4300000, guid: bea7c7ba7849e354198461f75527cdc4, type: 3}
---- !u!114 &114914470175548868
+--- !u!114 &114782608419270572
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013122234568}
+  m_GameObject: {fileID: 1824813741866018}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3402aab141adf66408ecc83b20a0e2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 20
---- !u!136 &136839150647392344
+--- !u!136 &136578542127862848
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013122234568}
+  m_GameObject: {fileID: 1824813741866018}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
