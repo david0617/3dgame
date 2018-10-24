@@ -14,6 +14,7 @@ public class Weapon : MonoBehaviour
     public int maxAmmocount;
     public int ammocount;
     public bool reloading = false;
+    public GameObject spawnPoint;
     
     private void Start()
     {
@@ -38,7 +39,7 @@ public class Weapon : MonoBehaviour
     private void FireBullet()
     {
         Quaternion rotation = mainCamera.transform.rotation;
-        GameObject ammoObj = Instantiate(ammo, transform.position, rotation);
+        GameObject ammoObj = Instantiate(ammo, spawnPoint.transform.position, rotation);
         ammoObj.GetComponent<Rigidbody>().AddForce(mainCamera.transform.forward * speed, ForceMode.Force);
     }
 
