@@ -296,13 +296,55 @@ RectTransform:
   - {fileID: 1456742376}
   - {fileID: 1242257260}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &511168922
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4650271188882246, guid: ee88d862103306a4aaf13782b923e431, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.1422324
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650271188882246, guid: ee88d862103306a4aaf13782b923e431, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.8472567
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650271188882246, guid: ee88d862103306a4aaf13782b923e431, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4.906292
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650271188882246, guid: ee88d862103306a4aaf13782b923e431, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650271188882246, guid: ee88d862103306a4aaf13782b923e431, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650271188882246, guid: ee88d862103306a4aaf13782b923e431, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650271188882246, guid: ee88d862103306a4aaf13782b923e431, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650271188882246, guid: ee88d862103306a4aaf13782b923e431, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee88d862103306a4aaf13782b923e431, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &512003634
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef87e5effccd0d4e9756c27a4bee731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 0
 --- !u!195 &512003637
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -444,7 +487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &512003642
 MonoBehaviour:
@@ -616,7 +659,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &671297025 stripped
 GameObject:
@@ -642,13 +685,16 @@ MonoBehaviour:
   wepName: M4A1 Sopmod
   mainCamera: {fileID: 534669904}
   ammo: {fileID: 1751490925696540, guid: f9678092e9bf06b4ba1beb09875e9852, type: 2}
-  speed: 1000
+  spawnPoint: {fileID: 411884519}
   fireingTimer: 0.1
-  reloadTimer: 3
   maxAmmocount: 50
   ammocount: 0
+  reloadTimer: 3
+  speed: 1000
+  ammoPickUP: 10
+  maxBulletCount: 500
+  BulletCount: 0
   reloading: 0
-  spawnPoint: {fileID: 411884519}
 --- !u!1 &731836175
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,13 +965,16 @@ MonoBehaviour:
   wepName: UMP-45
   mainCamera: {fileID: 534669904}
   ammo: {fileID: 1706743855904124, guid: 18438f251252e7645b417f2802c0bff9, type: 2}
-  speed: 1000
+  spawnPoint: {fileID: 731836175}
   fireingTimer: 0.5
-  reloadTimer: 3
   maxAmmocount: 20
   ammocount: 0
+  reloadTimer: 3
+  speed: 1000
+  ammoPickUP: 4
+  maxBulletCount: 200
+  BulletCount: 0
   reloading: 0
-  spawnPoint: {fileID: 731836175}
 --- !u!1 &901180614
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,8 +1042,50 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &972665882
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4768108085883186, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -6.6101265
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768108085883186, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.7102634
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768108085883186, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 15.53705
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768108085883186, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768108085883186, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768108085883186, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768108085883186, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768108085883186, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1019407633
 Prefab:
   m_ObjectHideFlags: 0
@@ -1036,7 +1127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5112e6444b23577429168ceb76476ae4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5112e6444b23577429168ceb76476ae4, type: 3}
@@ -1133,7 +1224,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1227899793
 GameObject:
@@ -1410,7 +1501,7 @@ Transform:
   - {fileID: 849298889}
   - {fileID: 1277024749}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362165175
 GameObject:
@@ -1842,8 +1933,24 @@ Transform:
   - {fileID: 1362165176}
   - {fileID: 170076735}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1720888319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1337560338095826, guid: ee88d862103306a4aaf13782b923e431,
+    type: 2}
+  m_PrefabInternal: {fileID: 511168922}
+--- !u!114 &1720888320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1720888319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f0653eee683ca4aaa0db4566a9699a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1721423168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18,
@@ -1868,13 +1975,16 @@ MonoBehaviour:
   wepName: AK-47
   mainCamera: {fileID: 534669904}
   ammo: {fileID: 1211774502823274, guid: 83ed523e4fbbe8a419d58f07f3323c2d, type: 2}
-  speed: 1000
+  spawnPoint: {fileID: 901180614}
   fireingTimer: 0.05
-  reloadTimer: 3
   maxAmmocount: 100
   ammocount: 0
+  reloadTimer: 3
+  speed: 1000
+  ammoPickUP: 20
+  maxBulletCount: 1000
+  BulletCount: 0
   reloading: 0
-  spawnPoint: {fileID: 901180614}
 --- !u!1 &1758591162 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: eb2136a3cdea8f84bb3b2ca2d025a818,
@@ -1899,13 +2009,16 @@ MonoBehaviour:
   wepName: Skopion VZ
   mainCamera: {fileID: 534669904}
   ammo: {fileID: 1930638813722262, guid: 7aee7eefdb6e60445ba55642bc0a2241, type: 2}
-  speed: 1000
+  spawnPoint: {fileID: 1564798540}
   fireingTimer: 3
-  reloadTimer: 3
   maxAmmocount: 1
   ammocount: 0
+  reloadTimer: 3
+  speed: 1000
+  ammoPickUP: 1
+  maxBulletCount: 10
+  BulletCount: 0
   reloading: 0
-  spawnPoint: {fileID: 1564798540}
 --- !u!1 &1888443794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,7 +2296,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}

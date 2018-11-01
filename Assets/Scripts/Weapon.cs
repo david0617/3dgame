@@ -6,19 +6,16 @@ public class Weapon : MonoBehaviour
 {
     public string wepName;
     public Camera mainCamera;
-    public GameObject ammo;
-    public int speed;
+    public GameObject ammo,spawnPoint;
     private bool canFire = true;
     public float fireingTimer;
-    public int reloadTimer;
-    public int maxAmmocount;
-    public int ammocount;
+    public int maxAmmocount,ammocount,reloadTimer,speed,ammoPickUP,maxBulletCount,BulletCount;
     public bool reloading = false;
-    public GameObject spawnPoint;
     
     private void Start()
     {
         ammocount = maxAmmocount;
+        BulletCount = maxBulletCount;
     }
  
     private void Update()
@@ -50,11 +47,27 @@ public class Weapon : MonoBehaviour
     }
 
     private IEnumerator ReloadTimer() {
-        reloading = true;
-        yield return new WaitForSeconds (reloadTimer);
-        ammocount = maxAmmocount;
-        reloading = false;
+        if (BulletCount > maxAmmocount ) {
+            reloading = true;
+            yield return new WaitForSeconds (reloadTimer);
+            ammocount = maxAmmocount;
+            BulletCount -= maxAmmocount;
+            reloading = false;
+        }else if(BulletCount > 0){
+            reloading = true;
+            yield return new WaitForSeconds (reloadTimer);
+            ammocount = BulletCount;
+            BulletCount -= BulletCount;
+            reloading = false;
         }
+        
+        }
+    public void PickUp() {
+        BulletCount += ammoPickUP;
+        if (BulletCount > maxBulletCount){
+            BulletCount = maxBulletCount;
+        }
+    } 
 }
 /* if (Input.GetButtonDown("Fire1")) {
         RaycastHit hit;

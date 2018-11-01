@@ -27,12 +27,12 @@ public class WeaponManager : MonoBehaviour {
 
 		GameObject activeWeapon = weapons[curWepIndex];
 		string ammoCount = activeWeapon.GetComponent<Weapon>().ammocount.ToString();
-		string maxAmmoCount = activeWeapon.GetComponent<Weapon>().maxAmmocount.ToString();
+		string maxBulletCount = activeWeapon.GetComponent<Weapon>().BulletCount.ToString();
 		bool reloading = activeWeapon.GetComponent<Weapon>().reloading;
 		if (reloading) {
 			ammoDisplay.text = "Reloading";
 		}else { 
-			ammoDisplay.text = "Ammo " + maxAmmoCount + "/" + ammoCount;
+			ammoDisplay.text = "Ammo " + ammoCount + "/" + maxBulletCount;
 		}
 	}
 
