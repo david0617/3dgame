@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GrenadeThrow : MonoBehaviour {
-	public GameObject grenadePreafab;
+	public GameObject grenadePreafab,spawnPoint;
 	public float throwForce;
-	public GameObject spawnPoint;
 	private GameObject grenade;
 	public int maxgrenade;
 	private int currentGrenade;
@@ -32,5 +31,11 @@ public class GrenadeThrow : MonoBehaviour {
 	string grenadecount = currentGrenade.ToString();
 	grenadeDisplay.text = "Grenade" + maxgrenadecount + "/" + grenadecount;
 
+	}
+	public void addGrenade() {
+		currentGrenade ++;
+		if (currentGrenade > maxgrenade){
+			currentGrenade = maxgrenade;
+		}
 	}
 }

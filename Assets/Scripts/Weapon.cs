@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     public float fireingTimer;
     public int maxAmmocount,ammocount,reloadTimer,speed,ammoPickUP,maxBulletCount,BulletCount;
     public bool reloading = false;
+    private int reloadCount;
     
     private void Start()
     {
@@ -47,7 +48,17 @@ public class Weapon : MonoBehaviour
     }
 
     private IEnumerator ReloadTimer() {
-        if (BulletCount > maxAmmocount ) {
+        if(ammocount > 0){
+            reloading = true;
+            reloadCount =  0;
+            while (ammocount < maxAmmocount){
+                ammocount ++;
+                reloadCount ++;
+            }
+            yield return new WaitForSeconds (reloadTimer);
+            BulletCount -= reloadCount;
+            reloading = false;            
+        }else if (BulletCount > maxAmmocount) {
             reloading = true;
             yield return new WaitForSeconds (reloadTimer);
             ammocount = maxAmmocount;

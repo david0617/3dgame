@@ -43,4 +43,7 @@ public class WeaponManager : MonoBehaviour {
 		curWepIndex = index;
 		weapons[curWepIndex].SetActive(true);
 	}
+	public void AddclipToSelectedWeapon(){
+		weapons[curWepIndex].GetComponent<Weapon>().PickUp();
+	}
 }

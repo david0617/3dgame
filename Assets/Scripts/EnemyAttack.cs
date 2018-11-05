@@ -15,10 +15,8 @@ public class EnemyAttack : MonoBehaviour
 	}
     public void OnCollisionEnter(Collision go)
     {
-        print("Tourcher");
         if (go.gameObject.CompareTag("Player"))
         {
-            print("touched player");
             attackRoutine = StartCoroutine(Attack(go.gameObject));
 
         }
