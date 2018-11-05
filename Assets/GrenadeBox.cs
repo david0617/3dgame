@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AmmoBox : MonoBehaviour {
+public class GrenadeBox : MonoBehaviour {
  public void OnTriggerEnter(Collider go){
-		if (go.CompareTag("Player")){
-			go.BroadcastMessage("AddclipToSelectedWeapon",SendMessageOptions.RequireReceiver);
+	if (go.CompareTag("Player")){
+			go.BroadcastMessage("addGrenade",SendMessageOptions.RequireReceiver);
 			Destroy(gameObject);
 		}
  	}
+
 }
