@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour {
 	public int maxHealth;
 	private int currenthealth,healthAdd,HPU;
-	private GameObject gameController;
+	public GameObject gameController;
 	public Text healthDisplay;
 	private string maxHealthDisplay,currentHealthDisplay;
 	
@@ -14,7 +14,6 @@ public class PlayerHealth : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		currenthealth = maxHealth;
-		gameController = GameObject.FindGameObjectWithTag("GameController");
 		maxHealthDisplay = maxHealth.ToString();
 	}
 	void Update () {
@@ -24,7 +23,6 @@ public class PlayerHealth : MonoBehaviour {
 	public void DealDamage (int Damage) {
 		currenthealth -= Damage; 
 		if (currenthealth <= 0 ){
-			Destroy(gameObject);
 			gameController.GetComponent<GameManager>().GameOver();
 		}
 	}

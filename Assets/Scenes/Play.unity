@@ -1334,7 +1334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dcfc98535e32044790e7fc4a594c4c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReloadGameSceneTimer: 5
 --- !u!4 &929161713
 Transform:
   m_ObjectHideFlags: 0
@@ -2214,6 +2213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  gameController: {fileID: 929161711}
   healthDisplay: {fileID: 1456742377}
 --- !u!136 &1716762297
 CapsuleCollider:
