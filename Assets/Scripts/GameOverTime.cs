@@ -23,7 +23,7 @@ public class GameOverTime : MonoBehaviour {
 	private IEnumerator GameOver(){
 		yield return new WaitForSeconds(1);
 		Time --;
-		if (Time >0){
+		if (Time > 0){
 			StartCoroutine(GameOver());
 		}else{SceneManager.LoadScene("play");}
 	}

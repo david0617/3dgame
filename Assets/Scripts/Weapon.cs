@@ -12,11 +12,13 @@ public class Weapon : MonoBehaviour
     public int maxAmmocount,ammocount,reloadTimer,speed,ammoPickUP,maxBulletCount,BulletCount;
     public bool reloading = false;
     private int reloadCount;
+    private Animator animator;
     
     private void Start()
     {
         ammocount = maxAmmocount;
         BulletCount = maxBulletCount;
+        animator = GetComponent<Animator>();
     }
  
     private void Update()
@@ -24,6 +26,7 @@ public class Weapon : MonoBehaviour
         if (Input.GetButton("Fire1") && canFire && ammocount > 0)
         {
             FireBullet();
+            animator.SetTrigger("Shoot");
             ammocount -= 1;
             StartCoroutine (FireTimer());
         } else if (Input.GetButtonDown("Reload") && !reloading){
