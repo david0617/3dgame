@@ -12,7 +12,7 @@ public class Ammo : MonoBehaviour {
 		Destroy(gameObject, timer);
 	}
 
-	public void OnCollisionEnter(Collision go){
+	public void OnTriggerEnter(Collider go){
 		EnemyHealth eh = go.gameObject.GetComponent<EnemyHealth>();
 		if (eh != null){
 			eh.dealDamage(Damage);
