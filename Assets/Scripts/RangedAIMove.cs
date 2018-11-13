@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class RangedAIMove : MonoBehaviour {
-	public float range;
+	public float range,speed;
 	private NavMeshAgent nav;
 	private GameObject player;
+	public Transform target;
 	// Use this for initialization
 	void Start () {
 		nav = GetComponent<NavMeshAgent>();
@@ -15,6 +16,7 @@ public class RangedAIMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		transform.LookAt(target);
 		if(ReadyToAttack()){
 			nav.isStopped = true;
 		}else {
@@ -39,4 +41,13 @@ public class RangedAIMove : MonoBehaviour {
 		}
 		return false;
 	}
+	/* private void LookAtPlayer(){
+		Vector3 targetDirection = target.position - transform.position;
+		Vector3 currentDirection  = transform.forward;
+
+		float step = speed * Time.deltaTime;
+
+		Vector3 newDir =  Vector3.RotateTowards(currentDirection, targetDirection, step, 0.0f);
+		transform.rotation = Quaternion.LookRotation(newDir);
+	}*/
 }

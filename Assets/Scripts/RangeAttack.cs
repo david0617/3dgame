@@ -24,7 +24,7 @@ public class RangeAttack : MonoBehaviour {
 	}
 	private void FireBullet()
     {
-        Quaternion rotation = transform.rotation;
+        Quaternion rotation = spawnPoint.transform.rotation;
         GameObject ammoObj = Instantiate(ammo, spawnPoint.transform.position, rotation);
         ammoObj.GetComponent<Rigidbody>().AddForce(transform.forward * speed, ForceMode.Force);
 	}
