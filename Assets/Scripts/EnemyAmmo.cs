@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmemyAmmo : MonoBehaviour {
+public class EnemyAmmo : MonoBehaviour {
 	public int timer;
 	public int Damage;
 	// Use this for initialization

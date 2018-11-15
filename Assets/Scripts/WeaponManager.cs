@@ -23,6 +23,7 @@ public class WeaponManager : MonoBehaviour {
 		 else if (Input.GetKeyDown(KeyCode.Alpha2)) SwitchWeapon(1);
 		 else if (Input.GetKeyDown(KeyCode.Alpha3)) SwitchWeapon(2);
 		 else if (Input.GetKeyDown(KeyCode.Alpha4)) SwitchWeapon(3);
+		 else if (Input.GetKeyDown(KeyCode.Alpha5)) SwitchWeapon(4);
 		 else if (Input.GetKeyDown(KeyCode.Q)) SwitchWeapon(prevWepIndex);
 
 		GameObject activeWeapon = weapons[curWepIndex];
