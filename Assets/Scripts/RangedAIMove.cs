@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class RangedAIMove : MonoBehaviour {
-	public float range,speed;
+	public float range;
 	private NavMeshAgent nav;
 	private GameObject player;
 	public Transform target;

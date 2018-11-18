@@ -11,9 +11,9 @@ public class EnemyAmmo : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter(Collider go){
-		PlayerHealth eh = go.gameObject.GetComponent<PlayerHealth>();
-		if (eh != null){
-			eh.DealDamage(Damage);
+		PlayerHealth ph = go.gameObject.GetComponent<PlayerHealth>();
+		if (ph != null){
+			ph.DealDamage(Damage);
 		} 
 		Destroy(gameObject);
 	}
