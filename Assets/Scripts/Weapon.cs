@@ -31,10 +31,8 @@ public class Weapon : MonoBehaviour
             StartCoroutine (FireTimer());
         } else if (Input.GetButtonDown("Reload") && !reloading){
             StartCoroutine (ReloadTimer());
-            print ("reload");
         } else if (ammocount == 0 && !reloading) {
             StartCoroutine (ReloadTimer());
-            print ("reload");
         }
     }
     private void FireBullet()
