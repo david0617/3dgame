@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4158886981597704}
-  - component: {fileID: 114390660252123878}
   - component: {fileID: 65599725757026114}
   - component: {fileID: 54693718098535920}
+  - component: {fileID: 114366964826149674}
   m_Layer: 0
   m_Name: AllAmmoBox
   m_TagString: Untagged
@@ -157,7 +157,7 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &114390660252123878
+--- !u!114 &114366964826149674
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,6 +165,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1528930806408898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2371be3007a973349b0fa9f56c13ad48, type: 3}
+  m_Script: {fileID: 11500000, guid: 72f0653eee683ca4aaa0db4566a9699a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
