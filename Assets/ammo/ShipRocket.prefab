@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 10
-  ExplodeDamage: 100
+  ExplodeDamage: 10
   AddExplosionForce: 100
 --- !u!136 &136270603396051292
 CapsuleCollider:
