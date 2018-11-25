@@ -6,10 +6,10 @@ public class BowAmmo : MonoBehaviour {
 	public int FlyTimer,StopTimer;
 	public bool usegravity;
 	public int Damage;
-	private GameObject rb;
+	Rigidbody rb;
 	// Use this for initialization
 	void Start () {
-		Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+		rb = gameObject.GetComponent<Rigidbody>();
 		Destroy(gameObject, StopTimer);
 		if (usegravity){
 			StartCoroutine(AmmoFlyTime());
@@ -18,6 +18,7 @@ public class BowAmmo : MonoBehaviour {
 	
 	 public IEnumerator AmmoFlyTime(){
 		yield return new WaitForSeconds(FlyTimer);
+		rb.useGravity = true;
 	}
 	
 

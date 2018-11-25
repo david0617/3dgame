@@ -6,7 +6,6 @@ public class TowarsAttack : MonoBehaviour {
 	public int EnemyAttackTime;
 	public GameObject ammo, spawnPoint;
 	public int speed;
-	private bool CanFire = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +19,7 @@ public class TowarsAttack : MonoBehaviour {
 	public IEnumerator EnemyAttack(){
 		yield return new WaitForSeconds(EnemyAttackTime);
 		FireBullet();
+		StartCoroutine(EnemyAttack());
 	}
 	private void FireBullet()
     {

@@ -6,6 +6,7 @@ public class EnemyRocket : MonoBehaviour {
 	public float radius;
 	public int ExplodeDamage;
 	public float AddExplosionForce;
+	public GameObject explosionPrefab;
 	// Use this for initialization
 	void Start () {
 	}
@@ -16,6 +17,7 @@ public class EnemyRocket : MonoBehaviour {
 		Explode();
 	}
 	public void Explode() {
+		
 		Collider[] colliders =  Physics.OverlapSphere(transform.position, radius); 
 		foreach (Collider c in colliders){
 			Rigidbody r = c.GetComponent<Rigidbody>();
@@ -26,6 +28,12 @@ public class EnemyRocket : MonoBehaviour {
 				eh.DealDamage(ExplodeDamage);
 			}
 		}
+		Instantiate(explosionPrefab,transform.position, Quaternion.identity);
 		Destroy(gameObject);
+	}
+
+	void OnDrawGizmosSelected(){
+		Gizmos.color = Color.red;
+		Gizmos.DrawSphere(transform.position, radius);
 	}
 }

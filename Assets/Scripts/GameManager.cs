@@ -7,4 +7,10 @@ public class GameManager : MonoBehaviour {
 	public void GameOver() {
 		SceneManager.LoadScene("GameOver");
 	}
+
+	void Update() {
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			SceneManager.LoadScene("Start");
+		}
+	}
 }
