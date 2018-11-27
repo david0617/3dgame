@@ -8,6 +8,7 @@ public class FragGrenade : MonoBehaviour {
 	public int Damage;
 	public int ExplodeDamage;
 	public float AddExplosionForce;
+	public GameObject explosionPrefab;
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(Timer());
@@ -35,6 +36,7 @@ public class FragGrenade : MonoBehaviour {
 				eh.dealDamage(ExplodeDamage);
 			}
 		}
+		Instantiate(explosionPrefab,transform.position, Quaternion.identity);
 		Destroy(gameObject);
 	}
 	public void OnCollisionEnter(Collision go){
@@ -42,5 +44,9 @@ public class FragGrenade : MonoBehaviour {
 		if (eh != null){
 			eh.dealDamage(Damage);
 		} 
+	}
+	void OnDrawGizmosSelected(){
+		Gizmos.color = Color.red;
+		Gizmos.DrawSphere(transform.position, radius);
 	}
 }
