@@ -26,7 +26,7 @@ public class Timer : MonoBehaviour {
 	private IEnumerator Timers(){
 		yield return new WaitForSeconds(1);
 		timeS -- ;
-		if(timeS == 0){
+		if(timeS == 0 || timeS < 0){
 			timeM--;
 			timeS = 59;
 		}

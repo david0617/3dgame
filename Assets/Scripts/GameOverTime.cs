@@ -25,6 +25,6 @@ public class GameOverTime : MonoBehaviour {
 		Time --;
 		if (Time > 0){
 			StartCoroutine(GameOver());
-		}else{SceneManager.LoadScene("play");}
+		}else{SceneManager.LoadScene("Start");}
 	}
 }

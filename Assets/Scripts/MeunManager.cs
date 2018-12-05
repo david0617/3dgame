@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MeunManager : MonoBehaviour {
 
-	public void StartGame(){
-		SceneManager.LoadScene("Play");
+	public void StartSurvivalGame(){
+		SceneManager.LoadScene("Survival");
 	}
 
+	public void StartEndLesslGame(){
+		SceneManager.LoadScene("EndLess");
+	}
 	public void ExitGame(){
 		Application.Quit();
 	}
