@@ -80,6 +80,10 @@ public class Weapon : MonoBehaviour
             BulletCount = maxBulletCount;
         }
     } 
+
+	void OnEnable(){
+		reloading = false;
+	}
 }
 /* if (Input.GetButtonDown("Fire1")) {
         RaycastHit hit;
