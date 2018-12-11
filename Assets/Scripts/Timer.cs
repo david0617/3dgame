@@ -36,7 +36,7 @@ public class Timer : MonoBehaviour {
 	private IEnumerator Times(){
 		yield return new WaitForSeconds(1);
 		timeS ++;
-		if(timeS == 60){
+		if(timeS == 59){
 			timeM ++;
 			timeS = 0;
 		}
