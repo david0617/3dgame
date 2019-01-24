@@ -83,6 +83,7 @@ public class Weapon : MonoBehaviour
 
 	void OnEnable(){
 		reloading = false;
+        canFire = true;
 	}
 }
 /* if (Input.GetButtonDown("Fire1")) {
