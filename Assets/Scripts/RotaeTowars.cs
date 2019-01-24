@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RotaeTowars : MonoBehaviour {
-	public Transform target;
+	private Transform target;
 	public float speed;
 	// Use this for initialization
 	void Start () {
-		
+		target  = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame
