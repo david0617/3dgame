@@ -8,7 +8,7 @@ public class GenerateSpawners : MonoBehaviour
     public Terrain terrain;
     public int timeM1, timeS1, tiemM2, timeS2, count1, count2;
     private int time1, time2, spawnCount1, spawnCount2;
-    public bool endLess1, endLess2, spawners1on,spawners2on;
+    public bool endLess1, endLess2, spawners1on, spawners2on;
 
 
     // Use this for initialization
@@ -20,28 +20,31 @@ public class GenerateSpawners : MonoBehaviour
         time1 = timeM1 * 60 + timeS1;
         time2 = tiemM2 * 60 + timeS2;
 
-        if (spawners1on){
-            StartCoroutine(Spawn1());
-        }
 
-        if(spawners2on){
+        if (spawners2on && endLess2)
+        {
+            StartCoroutine(Spawnendless2());
+        }
+        else if (spawners2on)
+        {
             StartCoroutine(Spawn2());
         }
-        if (spawners1on && endLess1){
-            StartCoroutine(Spawnensless1());
+        if (spawners1on && endLess1)
+        {
+            StartCoroutine(Spawnendless1());
         }
-
-        if(spawners2on  && endLess2){
-            StartCoroutine(Spawnensless2());
+        else if (spawners1on)
+        {
+            StartCoroutine(Spawn1());
         }
     }
 
     public IEnumerator Spawn1()
     {
-        
+
         if (spawnCount1 == count1)
-        {	
-			yield return new WaitForSeconds(1);
+        {
+            yield return new WaitForSeconds(1);
             float xSize1 = terrain.terrainData.size.x;
             float zSize1 = terrain.terrainData.size.z;
             System.Random R1 = new System.Random();
@@ -53,14 +56,15 @@ public class GenerateSpawners : MonoBehaviour
             Instantiate(spawners1, SpawnPoint, Quaternion.identity);
             spawnCount1--;
         }
-        
+
         yield return new WaitForSeconds(time1);
 
         StartCoroutine(Spawn1());
     }
 
-    public IEnumerator Spawnensless1()
+    public IEnumerator Spawnendless1()
     {
+        float xSize1 = terrain.terrainData.size.x;
         float zSize1 = terrain.terrainData.size.z;
         System.Random R1 = new System.Random();
         float xSpawnPoint1 = terrain.GetPosition().x + R1.Next(0, (int)xSize1);
@@ -69,10 +73,10 @@ public class GenerateSpawners : MonoBehaviour
         Vector3 SpawnPoint = new Vector3(xSpawnPoint1, ySpawnPoint, zSpawnPoint1);
 
         Instantiate(spawners1, SpawnPoint, Quaternion.identity);
-             
+
         yield return new WaitForSeconds(time1);
 
-        StartCoroutine(Spawnensless1());
+        StartCoroutine(Spawnendless1());
     }
 
     public IEnumerator Spawn2()
@@ -92,16 +96,15 @@ public class GenerateSpawners : MonoBehaviour
             spawnCount2--;
         }
         yield return new WaitForSeconds(time2);
-
         StartCoroutine(Spawn2());
     }
 
-    public IEnumerator Spawnensless2()
+    public IEnumerator Spawnendless2()
     {
         float xSize2 = terrain.terrainData.size.x;
         float zSize2 = terrain.terrainData.size.z;
         System.Random R2 = new System.Random();
-        float xSpawnPoint2 = terrain.GetPosition().x + R2.Next(0, (int)xSize2);    
+        float xSpawnPoint2 = terrain.GetPosition().x + R2.Next(0, (int)xSize2);
         float zSpawnPoint2 = terrain.GetPosition().z + R2.Next(0, (int)zSize2);
         float ySpawnPoint = terrain.GetPosition().y;
         Vector3 SpawnPoint = new Vector3(xSpawnPoint2, ySpawnPoint, zSpawnPoint2);
@@ -110,6 +113,6 @@ public class GenerateSpawners : MonoBehaviour
 
         yield return new WaitForSeconds(time2);
 
-        StartCoroutine(Spawnensless2());
+        StartCoroutine(Spawnendless2());
     }
 }

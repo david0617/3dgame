@@ -1515,7 +1515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawners1: {fileID: 1877314009727966, guid: 48e58871b4230ee44baf63559229bd19, type: 3}
-  spawners2: {fileID: 0}
+  spawners2: {fileID: 1897255240098794, guid: 085c182c8237e074c822b500280794ab, type: 3}
   terrain: {fileID: 2056146481}
   timeM1: 0
   timeS1: 30
@@ -1525,6 +1525,8 @@ MonoBehaviour:
   count2: 5
   endLess1: 0
   endLess2: 0
+  spawners1on: 0
+  spawners2on: 0
 --- !u!1001 &1019407633
 PrefabInstance:
   m_ObjectHideFlags: 0
