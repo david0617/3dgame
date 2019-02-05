@@ -48,8 +48,8 @@ public class GenerateSpawners : MonoBehaviour
             float xSize1 = terrain.terrainData.size.x;
             float zSize1 = terrain.terrainData.size.z;
             System.Random R1 = new System.Random();
-            float xSpawnPoint1 = terrain.GetPosition().x + R1.Next(0, (int)xSize1);
-            float zSpawnPoint1 = terrain.GetPosition().z + R1.Next(0, (int)zSize1);
+            float xSpawnPoint1 = terrain.GetPosition().x + R1.Next(0, (int)xSize1 - 5);
+            float zSpawnPoint1 = terrain.GetPosition().z + R1.Next(0, (int)zSize1 -5);
             float ySpawnPoint = terrain.GetPosition().y;
             Vector3 SpawnPoint = new Vector3(xSpawnPoint1, ySpawnPoint, zSpawnPoint1);
 
@@ -67,8 +67,8 @@ public class GenerateSpawners : MonoBehaviour
         float xSize1 = terrain.terrainData.size.x;
         float zSize1 = terrain.terrainData.size.z;
         System.Random R1 = new System.Random();
-        float xSpawnPoint1 = terrain.GetPosition().x + R1.Next(0, (int)xSize1);
-        float zSpawnPoint1 = terrain.GetPosition().z + R1.Next(0, (int)zSize1);
+        float xSpawnPoint1 = terrain.GetPosition().x + R1.Next(0, (int)xSize1 - 5);
+        float zSpawnPoint1 = terrain.GetPosition().z + R1.Next(0, (int)zSize1 - 5);
         float ySpawnPoint = terrain.GetPosition().y;
         Vector3 SpawnPoint = new Vector3(xSpawnPoint1, ySpawnPoint, zSpawnPoint1);
 
@@ -87,8 +87,8 @@ public class GenerateSpawners : MonoBehaviour
             float xSize2 = terrain.terrainData.size.x;
             float zSize2 = terrain.terrainData.size.z;
             System.Random R2 = new System.Random();
-            float xSpawnPoint2 = terrain.GetPosition().x + R2.Next(0, (int)xSize2);
-            float zSpawnPoint2 = terrain.GetPosition().z + R2.Next(0, (int)zSize2);
+            float xSpawnPoint2 = terrain.GetPosition().x + R2.Next(0, (int)xSize2 - 5);
+            float zSpawnPoint2 = terrain.GetPosition().z + R2.Next(0, (int)zSize2 - 5);
             float ySpawnPoint = terrain.GetPosition().y;
             Vector3 SpawnPoint = new Vector3(xSpawnPoint2, ySpawnPoint, zSpawnPoint2);
 
@@ -104,8 +104,8 @@ public class GenerateSpawners : MonoBehaviour
         float xSize2 = terrain.terrainData.size.x;
         float zSize2 = terrain.terrainData.size.z;
         System.Random R2 = new System.Random();
-        float xSpawnPoint2 = terrain.GetPosition().x + R2.Next(0, (int)xSize2);
-        float zSpawnPoint2 = terrain.GetPosition().z + R2.Next(0, (int)zSize2);
+        float xSpawnPoint2 = terrain.GetPosition().x + R2.Next(0, (int)xSize2 - 5);
+        float zSpawnPoint2 = terrain.GetPosition().z + R2.Next(0, (int)zSize2 - 5);
         float ySpawnPoint = terrain.GetPosition().y;
         Vector3 SpawnPoint = new Vector3(xSpawnPoint2, ySpawnPoint, zSpawnPoint2);
 

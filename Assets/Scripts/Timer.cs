@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour {
 	void Start () {
 		if(endLess){
 			timeS = 0;
+			timeM = 0;
 			StartCoroutine(Times());
 		}else{
 			StartCoroutine(Timers());
