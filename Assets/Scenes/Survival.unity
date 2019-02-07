@@ -150,7 +150,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92236959}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 307568391}
   - component: {fileID: 307568393}
   - component: {fileID: 307568392}
+  - component: {fileID: 307568394}
   m_Layer: 0
   m_Name: GreneadeBox
   m_TagString: Untagged
@@ -403,7 +404,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307568390}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6d3521439b747a47b24c205c8f6f538, type: 3}
   m_Name: 
@@ -412,6 +413,20 @@ MonoBehaviour:
   count: 0
   infinite: 1
   delayInSeconds: 1
+--- !u!114 &307568394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307568390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1520f0ba8ceff54a85946da9ab5b6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 1850635469330958, guid: c622a883f091e8147907a607d1c65007, type: 3}
+  spawnDelay: 1
 --- !u!1 &311139464
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,9 +931,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 15
-  m_SpotAngle: 50
+  m_Intensity: 3
+  m_Range: 25
+  m_SpotAngle: 70
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -1242,7 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1520f0ba8ceff54a85946da9ab5b6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 1043356014690310, guid: b54e153f96c648e419acb3993543bd88, type: 3}
+  gameObject: {fileID: 1043356014690310, guid: b54e153f96c648e419acb3993543bd88, type: 3}
   spawnDelay: 1
 --- !u!65 &794878527
 BoxCollider:
@@ -1664,7 +1679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1520f0ba8ceff54a85946da9ab5b6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 1824813741866018, guid: ad217e752221f1d43895cb6dc94055ea, type: 3}
+  gameObject: {fileID: 1824813741866018, guid: ad217e752221f1d43895cb6dc94055ea, type: 3}
   spawnDelay: 1
 --- !u!65 &967221045
 BoxCollider:
@@ -1845,7 +1860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1520f0ba8ceff54a85946da9ab5b6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 1720664034670794, guid: 7db3de23adb4b0f4c96fa9e34e7943a8, type: 3}
+  gameObject: {fileID: 1720664034670794, guid: 7db3de23adb4b0f4c96fa9e34e7943a8, type: 3}
   spawnDelay: 1
 --- !u!65 &1068704087
 BoxCollider:
@@ -2026,7 +2041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1520f0ba8ceff54a85946da9ab5b6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 1273470848224524, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 3}
+  gameObject: {fileID: 1273470848224524, guid: cbbffe40bc3133b46bea88f38f298c7c, type: 3}
   spawnDelay: 1
 --- !u!65 &1362180800
 BoxCollider:
@@ -2406,7 +2421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1520f0ba8ceff54a85946da9ab5b6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 1528930806408898, guid: 6947498ebeb9f7e4fb82eb2550fcd564, type: 3}
+  gameObject: {fileID: 1528930806408898, guid: 6947498ebeb9f7e4fb82eb2550fcd564, type: 3}
   spawnDelay: 1
 --- !u!65 &1695943838
 BoxCollider:
@@ -2471,7 +2486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 12.12, y: -15.300003}
+  m_AnchoredPosition: {x: 12.12, y: -15.299988}
   m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886782942
