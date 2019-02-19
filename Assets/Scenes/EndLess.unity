@@ -1330,7 +1330,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeS: 0
   timeM: 0
+  time: 1
   endLess: 1
+  key: 0
   timerDisplay: {fileID: 1912490813}
 --- !u!1 &896906051
 GameObject:

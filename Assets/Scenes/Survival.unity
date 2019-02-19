@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.001496973, g: 0.0013649581, b: 0.001299328, a: 1}
+  m_IndirectSpecularColor: {r: 0.0014925376, g: 0.0013667671, b: 0.0012952195, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -739,6 +739,7 @@ GameObject:
   - component: {fileID: 417463827}
   - component: {fileID: 417463826}
   - component: {fileID: 417463825}
+  - component: {fileID: 417463834}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -901,6 +902,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &417463834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417463824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f4c99887d9a1b9499e6fc000307f9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeS: 10
+  timeM: 0
+  time: 1
+  endLess: 0
+  key: 0
+  timerDisplay: {fileID: 1886782942}
 --- !u!1 &507498698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,7 +1590,6 @@ GameObject:
   - component: {fileID: 929161713}
   - component: {fileID: 929161712}
   - component: {fileID: 929161714}
-  - component: {fileID: 929161715}
   m_Layer: 0
   m_Name: gameGod
   m_TagString: GameController
@@ -1630,23 +1648,6 @@ MonoBehaviour:
   endLess2: 0
   spawners1on: 0
   spawners2on: 0
---- !u!114 &929161715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929161711}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f4c99887d9a1b9499e6fc000307f9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeS: 0
-  timeM: 5
-  endLess: 0
-  key: 0
-  timerDisplay: {fileID: 1886782942}
 --- !u!1 &967221042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,13 +2475,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1847697446}
-  - component: {fileID: 1847697448}
   - component: {fileID: 1847697447}
   - component: {fileID: 1847697449}
   - component: {fileID: 1847697450}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: Key
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2513,23 +2513,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7546685, y: 1.203325, z: 0.24449348}
   m_Center: {x: 0.053102136, y: 0.6379689, z: 0.14133644}
---- !u!114 &1847697448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847697445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f4c99887d9a1b9499e6fc000307f9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeS: 3
-  timeM: 0
-  endLess: 0
-  key: 1
-  timerDisplay: {fileID: 1886782942}
 --- !u!54 &1847697449
 Rigidbody:
   m_ObjectHideFlags: 0

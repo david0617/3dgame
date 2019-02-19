@@ -24,7 +24,7 @@ public class Key : MonoBehaviour
         PlayerHealth ph = go.gameObject.GetComponent<PlayerHealth>();
         if (ph != null && key)
         {
-			key.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }
