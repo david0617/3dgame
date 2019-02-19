@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
 	public int timeS,timeM;
-	public bool endLess;
+	public bool endLess,key;
 	public Text timerDisplay;
 	// Use this for initialization
 	void Start () {
@@ -13,8 +13,6 @@ public class Timer : MonoBehaviour {
 			timeS = 0;
 			timeM = 0;
 			StartCoroutine(Times());
-		}else{
-			StartCoroutine(Timers());
 		}
 	}
 	
@@ -27,12 +25,22 @@ public class Timer : MonoBehaviour {
 	private IEnumerator Timers(){
 		yield return new WaitForSeconds(1);
 		timeS -- ;
+		print(timeS);
 		if(timeS == 0 || timeS < 0){
 			timeM--;
 			timeS = 59;
 		}
 		StartCoroutine(Timers());
 	}
+
+	 public void OnTriggerEnter(Collider go)
+    {
+        PlayerHealth ph = go.gameObject.GetComponent<PlayerHealth>();
+        if (ph != null && key)
+        {
+			StartCoroutine(Timers());
+        }
+    }
 
 	private IEnumerator Times(){
 		yield return new WaitForSeconds(1);
