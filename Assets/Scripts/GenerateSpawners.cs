@@ -83,7 +83,9 @@ public class GenerateSpawners : MonoBehaviour
     {
         if (spawnCount2 == count2)
         {
-            yield return new WaitForSeconds(2);
+            System.Random T2 = new System.Random();
+            int a = T2.Next(1, 4);
+            yield return new WaitForSeconds(a);
             float xSize2 = terrain.terrainData.size.x;
             float zSize2 = terrain.terrainData.size.z;
             System.Random R2 = new System.Random();
@@ -101,6 +103,9 @@ public class GenerateSpawners : MonoBehaviour
 
     public IEnumerator Spawnendless2()
     {
+        System.Random T2 = new System.Random();
+        int a = T2.Next(1, 4);
+        yield return new WaitForSeconds(a);
         float xSize2 = terrain.terrainData.size.x;
         float zSize2 = terrain.terrainData.size.z;
         System.Random R2 = new System.Random();

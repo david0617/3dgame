@@ -6,18 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public int timeS, timeM, time;
-    public bool endLess, key;
-    public Text timerDisplay;
+    private int timeS, timeM;
+    public int kTimeS, kTimeM;
+    public bool key, display;
+    public Text timerDisplay, keyTimerDisplay;
+    public GameObject keyTimerDisplayObj;
     // Use this for initialization
     void Start()
     {
-        if (endLess)
-        {
-            timeS = 0;
-            timeM = 0;
-            StartCoroutine(Times());
-        }
+        StartCoroutine(Times());
+        keyTimerDisplayObj.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,28 +24,29 @@ public class Timer : MonoBehaviour
         timeM.ToString();
         timeS.ToString();
         timerDisplay.text = timeM + ":" + timeS;
-        if (timeS == 0 && timeM == 0)
+        keyTimerDisplay.text = kTimeM + ":" + kTimeS;
+        if (display == true)
         {
-            key = true;
-            StopCoroutine(Timers());
+            keyTimerDisplayObj.SetActive(false);
         }
     }
     private IEnumerator Timers()
     {
-        yield return new WaitForSeconds(time);
-        if (timeS == 0 && timeM == 0)
+        yield return new WaitForSeconds(1);
+        if (kTimeS == 0 && kTimeM == 0)
         {
             key = true;
+            display = true;
             StopCoroutine(Timers());
         }
-        else if (timeS == 1 && timeM > 0)
+        else if (kTimeS == 1 && kTimeM > 0)
         {
-            timeM -= 1;
-            timeS = 59;
+            kTimeM -= 1;
+            kTimeS = 59;
         }
         else
         {
-            timeS--;
+            kTimeS--;
         }
         StartCoroutine(Timers());
     }
@@ -58,12 +57,14 @@ public class Timer : MonoBehaviour
         if (k != null)
         {
             StartCoroutine(Timers());
+            display = true;
+            keyTimerDisplayObj.SetActive(true);
         }
     }
 
     private IEnumerator Times()
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(1);
         timeS++;
         if (timeS == 59)
         {

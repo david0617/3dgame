@@ -9,13 +9,14 @@ public class KeySpawners : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Random key = new Random();
-//        int randomNumber = key.next (0,8);
+        System.Random key = new System.Random();
+        int randomNumber = key.Next(0, 6);
+        print(randomNumber + 1);
+        SpawnKey(randomNumber);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SpawnKey(int a)
     {
-        
+        Quaternion rotation = keys[a].transform.rotation;
+        GameObject keyObj = Instantiate(key, keys[a].transform.position, rotation);
     }
 }
