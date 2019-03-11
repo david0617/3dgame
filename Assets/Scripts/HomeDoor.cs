@@ -26,7 +26,7 @@ public class HomeDoor : MonoBehaviour
                 textDisplay.text = "Hit F";
                 if (Input.GetKeyDown("f"))
                 {
-                    SceneManager.LoadScene("Home");
+                    SceneManager.LoadScene("GameOver");
                 }
             }
             else

@@ -869,7 +869,7 @@ MonoBehaviour:
   wepName: Skopion VZ
   mainCamera: {fileID: 1952747500}
   ammo: {fileID: 1930638813722262, guid: 7aee7eefdb6e60445ba55642bc0a2241, type: 3}
-  spawnPoint: {fileID: 734690965}
+  spawnPoint: {fileID: 1863483149}
   fireingTimer: 3
   maxAmmocount: 1
   ammocount: 0
@@ -1369,7 +1369,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 9.079987}
-  m_SizeDelta: {x: 18.3, y: 34.2}
+  m_SizeDelta: {x: 9.93, y: 19.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &592417763
 MonoBehaviour:
@@ -1392,8 +1392,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: cd25d80d03a864fdd90534b28f15208a, type: 3}
+    m_FontSize: 0
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1558,7 +1558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734690966}
   m_Layer: 0
-  m_Name: AmmoSpawe
+  m_Name: AmmoSpaweAK-47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1572,7 +1572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734690965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: -0.08, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1690690916}
@@ -1886,6 +1886,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877164341}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &882719268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 882719269}
+  m_Layer: 0
+  m_Name: AmmoSpaweUMP-54
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &882719269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882719268}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.04, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1690690916}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &929161711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,8 +1984,8 @@ MonoBehaviour:
   count2: 1
   endLess1: 1
   endLess2: 1
-  spawners1on: 1
-  spawners2on: 1
+  spawners1on: 0
+  spawners2on: 0
 --- !u!114 &929161715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2294,6 +2324,36 @@ MonoBehaviour:
   count: 0
   infinite: 1
   delayInSeconds: 1
+--- !u!1 &1153434415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153434416}
+  m_Layer: 0
+  m_Name: AmmoSpaweM4A1 Sopmod
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1153434416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153434415}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.041, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1690690916}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1188179271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2370,7 +2430,7 @@ MonoBehaviour:
   wepName: M4A1 Sopmod
   mainCamera: {fileID: 1952747500}
   ammo: {fileID: 1129273291260266, guid: e38b95c00b182e4489629085b0eb9462, type: 3}
-  spawnPoint: {fileID: 734690965}
+  spawnPoint: {fileID: 1153434415}
   fireingTimer: 0.1
   maxAmmocount: 50
   ammocount: 0
@@ -2652,7 +2712,7 @@ MonoBehaviour:
   wepName: UMP-45
   mainCamera: {fileID: 1952747500}
   ammo: {fileID: 8740119865974428549, guid: 18438f251252e7645b417f2802c0bff9, type: 3}
-  spawnPoint: {fileID: 734690965}
+  spawnPoint: {fileID: 882719268}
   fireingTimer: 0.5
   maxAmmocount: 20
   ammocount: 0
@@ -2883,6 +2943,9 @@ Transform:
   - {fileID: 507498699}
   - {fileID: 1652373799}
   - {fileID: 734690966}
+  - {fileID: 1153434416}
+  - {fileID: 882719269}
+  - {fileID: 1863483150}
   m_Father: {fileID: 417463833}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3136,6 +3199,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 19.87, y: 10.59, z: 15.3}
   m_Center: {x: 0.5, y: 5.5, z: 0.1}
+--- !u!1 &1863483149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1863483150}
+  m_Layer: 0
+  m_Name: AmmoSpaweSkorpion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1863483150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863483149}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.095, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1690690916}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1886782939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,7 +3246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1886782940
 RectTransform:
   m_ObjectHideFlags: 0
