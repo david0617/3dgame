@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
         timeS.ToString();
         timerDisplay.text = timeM + ":" + timeS;
         keyTimerDisplay.text = kTimeM + ":" + kTimeS;
-        if (display == true)
+        if (display == false)
         {
             keyTimerDisplayObj.SetActive(false);
         }
@@ -36,10 +36,10 @@ public class Timer : MonoBehaviour
         if (kTimeS == 0 && kTimeM == 0)
         {
             key = true;
-            display = true;
+            display = false;
             StopCoroutine(Timers());
         }
-        else if (kTimeS == 1 && kTimeM > 0)
+        else if (kTimeS == 1 && kTimeM < 0)
         {
             kTimeM -= 1;
             kTimeS = 59;
