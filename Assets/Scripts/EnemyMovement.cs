@@ -7,7 +7,6 @@ public class EnemyMovement : MonoBehaviour {
 
 	NavMeshAgent navMeshAgent;
 	GameObject player;
-	public int Speed;
 
 	// Use this for initialization
 	void Start () {
