@@ -5,8 +5,6 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
     public GameObject key;
-    private int prevWepIndex = 0;
-	private int curWepIndex = 0;
     // Start is called before the first frame update
      public void OnTriggerEnter(Collider go)
     {

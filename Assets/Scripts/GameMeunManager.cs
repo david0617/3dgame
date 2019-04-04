@@ -11,6 +11,8 @@ public class GameMeunManager : MonoBehaviour
     void Start()
     {
         loading.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
     }
     public void StartSurvivalGame()
     {

@@ -39,9 +39,9 @@ public class Timer : MonoBehaviour
             display = false;
             StopCoroutine(Timers());
         }
-        else if (kTimeS == 1 && kTimeM < 0)
+        else if (kTimeS == 0 && kTimeM > 0)
         {
-            kTimeM -= 1;
+            kTimeM --;
             kTimeS = 59;
         }
         else

@@ -13,7 +13,7 @@ public class PlayerLook : MonoBehaviour {
         head = transform.Find("Head").gameObject;
         originalRotation = transform.localRotation.eulerAngles;
         yRotation = originalRotation.y;
-
+        Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
