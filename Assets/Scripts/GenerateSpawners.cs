@@ -50,7 +50,7 @@ public class GenerateSpawners : MonoBehaviour
             System.Random R1 = new System.Random();
             float xSpawnPoint1 = terrain.GetPosition().x + R1.Next(0, (int)xSize1);
             float zSpawnPoint1 = terrain.GetPosition().z + R1.Next(0, (int)zSize1);
-            float ySpawnPoint1 = terrain.GetPosition().y;
+            float ySpawnPoint1 = terrain.GetPosition().y + 1;
             Vector3 SpawnPoint = new Vector3(xSpawnPoint1, ySpawnPoint1, zSpawnPoint1);
 
             Instantiate(spawners1, SpawnPoint, Quaternion.identity);
@@ -69,7 +69,7 @@ public class GenerateSpawners : MonoBehaviour
         System.Random R1 = new System.Random();
         float xSpawnPoint2 = terrain.GetPosition().x + R1.Next(0, (int)xSize1);
         float zSpawnPoint2 = terrain.GetPosition().z + R1.Next(0, (int)zSize1);
-        float ySpawnPoint2 = terrain.GetPosition().y;
+        float ySpawnPoint2 = terrain.GetPosition().y + 1;
         Vector3 SpawnPoint = new Vector3(xSpawnPoint2, ySpawnPoint2, zSpawnPoint2);
 
         Instantiate(spawners1, SpawnPoint, Quaternion.identity);
@@ -91,7 +91,7 @@ public class GenerateSpawners : MonoBehaviour
             System.Random R2 = new System.Random();
             float xSpawnPoint3 = terrain.GetPosition().x + R2.Next(0, (int)xSize2);
             float zSpawnPoint3 = terrain.GetPosition().z + R2.Next(0, (int)zSize2);
-            float ySpawnPoint3 = terrain.GetPosition().y;
+            float ySpawnPoint3 = terrain.GetPosition().y + 1;
             Vector3 SpawnPoint = new Vector3(xSpawnPoint3, ySpawnPoint3, zSpawnPoint3);
 
             Instantiate(spawners2, SpawnPoint, Quaternion.identity);
@@ -111,7 +111,7 @@ public class GenerateSpawners : MonoBehaviour
         System.Random R2 = new System.Random();
         float xSpawnPoint4 = terrain.GetPosition().x + R2.Next(0, (int)xSize2);
         float zSpawnPoint4 = terrain.GetPosition().z + R2.Next(0, (int)zSize2);
-        float ySpawnPoint4 = terrain.GetPosition().y;
+        float ySpawnPoint4 = terrain.GetPosition().y + 1;
         Vector3 SpawnPoint = new Vector3(xSpawnPoint4, ySpawnPoint4, zSpawnPoint4);
 
         Instantiate(spawners2, SpawnPoint, Quaternion.identity);

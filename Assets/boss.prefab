@@ -166,6 +166,7 @@ MonoBehaviour:
   health: 500
   objToSpawn: {fileID: 4604279727440024964, guid: 17af1d06ee1743348ad8dc75445e329d,
     type: 3}
+  point: 1000
 --- !u!114 &8547920042949997422
 MonoBehaviour:
   m_ObjectHideFlags: 0

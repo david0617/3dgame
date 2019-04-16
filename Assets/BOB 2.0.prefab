@@ -219,6 +219,7 @@ MonoBehaviour:
   - {fileID: 1850635469330958, guid: c622a883f091e8147907a607d1c65007, type: 3}
   - {fileID: 1720664034670794, guid: 7db3de23adb4b0f4c96fa9e34e7943a8, type: 3}
   - {fileID: 1043356014690310, guid: b54e153f96c648e419acb3993543bd88, type: 3}
+  point: 100
 --- !u!114 &114288092693401148
 MonoBehaviour:
   m_ObjectHideFlags: 0
