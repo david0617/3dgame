@@ -8,6 +8,9 @@ TagManager:
   - Ammo
   - Key
   - weapon
+  - weapon1
+  - weapon2
+  - weapon3
   layers:
   - Default
   - TransparentFX
