@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d3521439b747a47b24c205c8f6f538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objToSpawn: {fileID: 8547920042949997431, guid: 06a3936468b55bd4da5aa68404b1bcec,
+  objToSpawn: {fileID: 3024688747562433135, guid: 52111b4562c73984dbbb7d93d3765de8,
     type: 3}
   count: 1
   infinite: 0
+  boss: 1
   delayInSeconds: 180

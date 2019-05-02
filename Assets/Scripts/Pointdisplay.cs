@@ -6,7 +6,7 @@ public class Pointdisplay : MonoBehaviour
 {
     public Text Pointdisplays;
     private string pointsdisplay;
-    public int point;
+    private int point;
     private bool goPoint;
     // Start is called before the first frame update
     void Start()

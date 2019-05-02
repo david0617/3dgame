@@ -5,12 +5,13 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour {
 	public GameObject objToSpawn;
 	public int count;
-	public bool infinite;
+	public bool infinite, boss;
 	public int delayInSeconds;
 	// Use this for initialization
 	void Start () {
 		if (infinite) StartCoroutine(spawnObjectsInfinite());
-		else StartCoroutine(spawnObjects());
+		else if (boss) StartCoroutine(spawnObjectBoss());
+		else StartCoroutine(spawnObjects()) ;
 	}
 	IEnumerator spawnObjectsInfinite() {
 		while(true){
@@ -26,4 +27,10 @@ public class ObjectSpawner : MonoBehaviour {
 		}
 	}
 
+	IEnumerator spawnObjectBoss() {
+		for (; count > 0; count--){
+			yield return new WaitForSeconds(delayInSeconds);
+			Instantiate(objToSpawn, transform.position, Quaternion.identity);
+		}
+	}
 }

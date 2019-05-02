@@ -16,7 +16,6 @@ public class RangedAIMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.LookAt(target);
 		if(ReadyToAttack()){
 			nav.isStopped = true;
 		}else {

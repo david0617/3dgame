@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d3521439b747a47b24c205c8f6f538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objToSpawn: {fileID: 1121793910766486, guid: cbdfc9c011b4c8d4a81e8891bb0bf74d, type: 3}
+  objToSpawn: {fileID: 100650, guid: cb8093a97b580c247984dace3046bec3, type: 3}
   count: 0
   infinite: 1
+  boss: 0
   delayInSeconds: 10

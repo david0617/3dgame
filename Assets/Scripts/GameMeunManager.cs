@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameMeunManager : MonoBehaviour
 {
-    public GameObject startEndLesslGameB, startSurvivalGameB, exitGameB, loading;
+    public GameObject startEndLesslGameB, startSurvivalGameB, exitGameB, loading, survive;
     private string EndlessGameS, SurvivalGameS;
     public int time;
     void Start()
@@ -35,6 +35,7 @@ public class GameMeunManager : MonoBehaviour
         startSurvivalGameB.SetActive(false);
         startEndLesslGameB.SetActive(false);
         exitGameB.SetActive(false);
+        survive.SetActive(false);
         loading.SetActive(true);
     }
 
