@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour {
 		currenthealth = maxHealth;
 		maxHealthDisplay = maxHealth.ToString();
 		players[12].SetActive(false);
+		players[13].SetActive(false);
 	}
 	void Update () {
 		currentHealthDisplay = currenthealth.ToString();
@@ -24,12 +25,13 @@ public class PlayerHealth : MonoBehaviour {
 	public void DealDamage (int Damage) {
 		currenthealth -= Damage; 
 		if (currenthealth <= 0 ){
-		//	gameController.GetComponent<GameManager>().GameOver();
+		gameController.GetComponent<GameManager>().GameOver();
 		foreach (GameObject player in players)
 		{
 			player.SetActive(false);
 		}
 		players[12].SetActive(true);
+		players[13].SetActive(true);
 		}
 	}
 

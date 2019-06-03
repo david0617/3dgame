@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour {
 	public GameObject objToSpawn;
-	public int count;
+	public int count, minT, maxT;
 	public bool infinite, boss;
 	public int delayInSeconds;
 	// Use this for initialization
@@ -16,7 +16,9 @@ public class ObjectSpawner : MonoBehaviour {
 	IEnumerator spawnObjectsInfinite() {
 		while(true){
 			Instantiate(objToSpawn, transform.position, Quaternion.identity);
-			yield return new WaitForSeconds(delayInSeconds);
+			System.Random R1 = new System.Random();
+            int time = R1.Next(minT, maxT);
+			yield return new WaitForSeconds(delayInSeconds + time);
 		}
 	}
 

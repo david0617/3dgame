@@ -22,45 +22,49 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (controller.isGrounded && Input.GetButton("left shift") && energy > 0)
+        PlayerHealth ph = gameObject.GetComponent<PlayerHealth>();
+        if (ph.currenthealth > 0)
         {
+            if (controller.isGrounded && Input.GetButton("left shift") && energy > 0)
+            {
 
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed * speedUp;
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-        }
-        else if (controller.isGrounded)
-        {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-        }
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
-        if (Input.GetButtonDown("left shift"))
-        {
-            StopAllCoroutines();
-            StartCoroutine(Energy());
-        }
-        if (Input.GetButtonUp("left shift"))
-        {
-            StopAllCoroutines();
-            StartCoroutine(EnergyBack1());
-        }
-        if (energy > 100)
-        {
-            StopAllCoroutines();
-            energy = 100;
-            energydisplay.text = "Energy " + maxEnergy.ToString() + "/" + energy.ToString();
-        }
-         if (energy < 0)
-        {
-            energy = 0;
-            energydisplay.text = "Energy " + maxEnergy.ToString() + "/" + energy.ToString();
+                moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                moveDirection = transform.TransformDirection(moveDirection);
+                moveDirection *= speed * speedUp;
+                if (Input.GetButton("Jump"))
+                    moveDirection.y = jumpSpeed;
+            }
+            else if (controller.isGrounded)
+            {
+                moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                moveDirection = transform.TransformDirection(moveDirection);
+                moveDirection *= speed;
+                if (Input.GetButton("Jump"))
+                    moveDirection.y = jumpSpeed;
+            }
+            moveDirection.y -= gravity * Time.deltaTime;
+            controller.Move(moveDirection * Time.deltaTime);
+            if (Input.GetButtonDown("left shift"))
+            {
+                StopAllCoroutines();
+                StartCoroutine(Energy());
+            }
+            if (Input.GetButtonUp("left shift"))
+            {
+                StopAllCoroutines();
+                StartCoroutine(EnergyBack1());
+            }
+            if (energy > 100)
+            {
+                StopAllCoroutines();
+                energy = 100;
+                energydisplay.text = "Energy " + maxEnergy.ToString() + "/" + energy.ToString();
+            }
+            if (energy < 0)
+            {
+                energy = 0;
+                energydisplay.text = "Energy " + maxEnergy.ToString() + "/" + energy.ToString();
+            }
         }
     }
     public IEnumerator Energy()

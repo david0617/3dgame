@@ -7,9 +7,19 @@ public class EnemyHealth : MonoBehaviour
     public int health;
     public GameObject[] pickUp;
     public int point;
-    void Update (){
-         int ph = GameObject.Find("player").GetComponent<PlayerHealth>().currenthealth;
-         if (ph == 0 || ph < 0)
+    public float killtime;
+    private Animator animator;
+    public bool Dead;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        Dead = false;
+    }
+    void Update()
+    {
+        int ph = GameObject.Find("player").GetComponent<PlayerHealth>().currenthealth;
+        if (ph == 0 || ph < 0)
         {
             Destroy(gameObject);
         }
@@ -19,15 +29,22 @@ public class EnemyHealth : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            Destroyssequence();
-            pickUpSequence();
+            StartCoroutine(Destroyssequence());
         }
     }
 
-    public void Destroyssequence()
+    public void Destroys()
     {
         Destroy(gameObject);
         GameObject.Find("player").GetComponent<Pointdisplay>().add(point);
+    }
+    IEnumerator Destroyssequence()
+    {
+        Dead = true;
+        animator.SetTrigger("Dead");
+        yield return new WaitForSeconds(killtime);
+        Destroys();
+        pickUpSequence();
     }
     public void pickUpSequence()
     {
@@ -58,7 +75,8 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(pickUp[5], transform.position, Quaternion.identity);
         }
     }
-    public IEnumerator kill(){
+    public IEnumerator kill()
+    {
         yield return new WaitForSeconds(1);
         int PH = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().currenthealth;
     }

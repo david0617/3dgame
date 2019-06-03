@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    private int timeS, timeM;
+    public int timeS, timeM;
     public int kTimeS, kTimeM;
     public bool key, display;
     public Text timerDisplay, keyTimerDisplay;
@@ -14,6 +14,8 @@ public class Timer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        timeM = 0;
+        timeS = 0;
         StartCoroutine(Times());
         keyTimerDisplayObj.SetActive(false);
     }
@@ -29,6 +31,11 @@ public class Timer : MonoBehaviour
         {
             keyTimerDisplayObj.SetActive(false);
         }
+        PlayerHealth ph = gameObject.GetComponent<PlayerHealth>();
+        if (ph.currenthealth <= 0)
+        {
+        StopAllCoroutines();
+        }
     }
     private IEnumerator Timers()
     {
@@ -41,7 +48,7 @@ public class Timer : MonoBehaviour
         }
         else if (kTimeS == 0 && kTimeM > 0)
         {
-            kTimeM --;
+            kTimeM--;
             kTimeS = 59;
         }
         else

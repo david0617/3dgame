@@ -768,12 +768,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300611964618398}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.19743156
-  m_Height: 1.8409102
+  m_Radius: 0.28186408
+  m_Height: 1.8409103
   m_Direction: 1
-  m_Center: {x: 0.013522148, y: 0.9056412, z: -0.038747787}
+  m_Center: {x: 0, y: 0.90564126, z: 0.07448602}
 --- !u!195 &195586075204479724
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -783,7 +783,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1300611964618398}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -792,7 +792,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.8
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -829,6 +829,8 @@ MonoBehaviour:
   - {fileID: 1720664034670794, guid: 7db3de23adb4b0f4c96fa9e34e7943a8, type: 3}
   - {fileID: 1043356014690310, guid: b54e153f96c648e419acb3993543bd88, type: 3}
   point: 100
+  killtime: 1
+  Dead: 0
 --- !u!114 &579941925768406004
 MonoBehaviour:
   m_ObjectHideFlags: 0

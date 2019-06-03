@@ -16,18 +16,14 @@ public class HomeDoor : MonoBehaviour
     public void OnTriggerEnter(Collider go)
     {
         Timer KO = go.gameObject.GetComponent<Timer>();
-
         PlayerHealth ph = go.gameObject.GetComponent<PlayerHealth>();
+        NextScenes NS = GameObject.Find("NextScene").GetComponent<NextScenes>();
         if (ph != null)
         {
-            if (KO.key == true)
+            if ( KO.key == true)
             {
-                textDisplayOBJ.SetActive(true);
-                textDisplay.text = "Hit F";
-                if (Input.GetKeyDown("f"))
-                {
-                    SceneManager.LoadScene("GameOver");
-                }
+                NS.next();
+                SceneManager.LoadScene("GameOver");
             }
             else
             {
@@ -40,5 +36,13 @@ public class HomeDoor : MonoBehaviour
     public void OnTriggerExit(Collider go)
     {
         textDisplayOBJ.SetActive(false);
+    }
+
+    public void opendoor()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

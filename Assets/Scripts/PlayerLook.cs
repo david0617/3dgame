@@ -25,15 +25,19 @@ public class PlayerLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xspeed = Input.GetAxis("Mouse X");
-        transform.Rotate(Vector3.up * xspeed * sensitivity * Time.deltaTime);
+        PlayerHealth ph = gameObject.GetComponent<PlayerHealth>();
+        if (ph.currenthealth > 0)
+        {
+            float xspeed = Input.GetAxis("Mouse X");
+            transform.Rotate(Vector3.up * xspeed * sensitivity * Time.deltaTime);
 
-        float yspeed = -Input.GetAxis("Mouse Y");
-        yRotation += yspeed * sensitivity * Time.deltaTime;
-        yRotation = Mathf.Clamp(yRotation, -80, 80);
+            float yspeed = -Input.GetAxis("Mouse Y");
+            yRotation += yspeed * sensitivity * Time.deltaTime;
+            yRotation = Mathf.Clamp(yRotation, -80, 80);
 
-        Quaternion localRotation = Quaternion.Euler(yRotation, 0, 0);
-        head.transform.localRotation = localRotation;
+            Quaternion localRotation = Quaternion.Euler(yRotation, 0, 0);
+            head.transform.localRotation = localRotation;
+        }
     }
 
 }
