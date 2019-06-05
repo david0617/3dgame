@@ -5,12 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameMeunManager : MonoBehaviour
 {
-    public GameObject startEndLesslGameB, startSurvivalGameB, exitGameB, loading, survive;
+    public GameObject startEndLesslGameB, startSurvivalGameB, exitGameB, survive;
     private string EndlessGameS, SurvivalGameS;
+    public GameObject[] loading;
     public int time;
     void Start()
     {
-        loading.SetActive(false);
+        //loading.SetActive(false);
+        foreach (GameObject load in loading)
+		{
+			load.SetActive(false);
+		}
         Cursor.lockState = CursorLockMode.None;
         Cursor.lockState = CursorLockMode.Confined;
     }
@@ -36,7 +41,10 @@ public class GameMeunManager : MonoBehaviour
         startEndLesslGameB.SetActive(false);
         exitGameB.SetActive(false);
         survive.SetActive(false);
-        loading.SetActive(true);
+        foreach (GameObject load in loading)
+		{
+			load.SetActive(true);
+		}
     }
 
     public IEnumerator StartGameTimer(string mode)

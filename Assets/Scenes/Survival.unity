@@ -4016,7 +4016,7 @@ MonoBehaviour:
   count1: 1
   count2: 1
   endLess1: 1
-  endLess2: 1
+  endLess2: 0
   spawners1on: 1
   spawners2on: 1
 --- !u!114 &929161716
@@ -7212,7 +7212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2023909446
 Transform:
   m_ObjectHideFlags: 0
