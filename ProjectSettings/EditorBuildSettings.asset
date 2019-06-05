@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: c361e6c99f7bfb74b8e88801a2166a1c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/EndLess.unity
     guid: 6f8abc6f1a2532148a27f920ef5619b5
   - enabled: 1

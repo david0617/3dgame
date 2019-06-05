@@ -43,4 +43,5 @@ public class ObjectSpawner : MonoBehaviour {
             int time = R1.Next(minT, maxT);
 			yield return new WaitForSeconds(delayInSeconds + time);
 		}
+	}
 }

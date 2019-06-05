@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objToSpawn: {fileID: 1300611964618398, guid: 3d3f088ec7127fc4685b17863fa83898, type: 3}
   count: 0
-  minT: 0
-  maxT: 5
+  minT: 5
+  maxT: 10
   infinite: 1
   boss: 0
   delayInSeconds: 10

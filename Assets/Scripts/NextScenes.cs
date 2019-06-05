@@ -6,9 +6,12 @@ public class NextScenes : MonoBehaviour
 {
     static public int timeRM, timeRS, pointS;
     public int timerM, timerS, point;
+    static public bool gameOver = true;
+    public bool gameover;
 
     void Start()
     {
+        gameover = gameOver;
         timerM = timeRM;
         timerS = timeRS;
         point = pointS;
@@ -18,17 +21,15 @@ public class NextScenes : MonoBehaviour
     }
     void Update()
     {
-//        Pointdisplay Pointdisplay = GameObject.Find("player").GetComponent<Pointdisplay>();
-//        Timer timer = GameObject.Find("player").GetComponent<Timer>();
-//        timeRM = timer.timeM;
-//        timeRS = timer.timeS;
-//        pointS = Pointdisplay.point;
+
     }
 
     public void next()
     {
         Pointdisplay Pointdisplay = GameObject.Find("player").GetComponent<Pointdisplay>();
         Timer timer = GameObject.Find("player").GetComponent<Timer>();
+        PlayerHealth PH = GameObject.Find("player").GetComponent<PlayerHealth>();
+        if(PH.currenthealth == 0) gameOver = true;
         timeRM = timer.timeM;
         timeRS = timer.timeS;
         pointS = Pointdisplay.point;
